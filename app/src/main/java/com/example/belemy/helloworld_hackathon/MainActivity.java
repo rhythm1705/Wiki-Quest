@@ -8,6 +8,8 @@ import android.widget.Switch;
 
 import java.util.ArrayList;
 
+import backend.GameParameters;
+
 public class MainActivity extends AppCompatActivity {
 
     int[] ids = new int[]{R.id.citiesSwitch, R.id.sportsSwitch, R.id.moviesSwitch, R.id.historySwitch, R.id.scienceSwitch};
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //savedInstanceState.getStringArrayList("genres");
+
     }
     public void nextActivity(View view){
         ArrayList<String> genres = new ArrayList<>();
@@ -28,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
                 genres.add(genreSwitch.getText().toString());
             }
         }
-        Bundle bundlegenres = new Bundle();
-        bundlegenres.putStringArrayList("genres", genres);
+        GameParameters.genres = genres;
+        //System.out.println(genres.toString());
+        //Bundle bundlegenres = new Bundle();
+        //bundlegenres.putStringArrayList("genres", genres);
 
         Intent intent = new Intent(this, Questions_Activity.class);
-        startActivity(intent, bundlegenres);
+        startActivity(intent);
     }
 }

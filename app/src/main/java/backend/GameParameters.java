@@ -3,15 +3,10 @@ import java.util.ArrayList;
 
 public class GameParameters {
 
-    public ArrayList<String> genres;
-    public int num_Lines;
-    public int num_Questions;
-    public int time_Question;
+    public static ArrayList<String> genres;
+    public static int num_Questions;
+    public static int time_Question;
 
-    public GameParameters(ArrayList<String> genres, int l, int q, int t) {
-        this.genres = genres;
-        num_Lines = l;
-        num_Questions = q;
-        time_Question = t;
+    public GameParameters() {
     }
 }

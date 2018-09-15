@@ -8,6 +8,8 @@ import android.widget.Switch;
 
 import java.util.ArrayList;
 
+import backend.GameParameters;
+
 public class Questions_Activity extends AppCompatActivity {
 
     int[] ids = new int[]{R.id.Question3, R.id.Question5, R.id.Question10, R.id.Question15};
@@ -16,12 +18,15 @@ public class Questions_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions_);
+        //savedInstanceState.getStringArrayList("genres");
     }
     public void nextActivity(View view){
         ArrayList<String> QuestionNumber = new ArrayList<>();
         for (int id : ids){
             Switch Question = findViewById(id);
             if (Question.isChecked()){
+                GameParameters.num_Questions=Integer.parseInt((String.valueOf(id)));
+                System.out.println(GameParameters.num_Questions);
                 break;
             }
         }
