@@ -18,7 +18,7 @@ public class WebScraper {
     public void fillWebsites(){
         try {
             BufferedReader reader = new BufferedReader(new FileReader("Websites"));
-            while(reader.readLine()!=null&&reader.readLine().charAt(0)){
+            while(reader.readLine() != null){
 
             }
 
@@ -27,5 +27,8 @@ public class WebScraper {
 
         }
 
+    }
+    public static void main (String[] args){
+        System.out.println("Hello World");
     }
 }
