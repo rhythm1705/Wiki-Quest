@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questions_Activity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <Button
+        android:id="@+id/Question5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/Question10"
+        app:layout_constraintStart_toStartOf="@+id/Question3"
+        app:layout_constraintTop_toBottomOf="@+id/Question3" />
+
+    <Button
+        android:id="@+id/Question10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="10"
+        app:layout_constraintBottom_toTopOf="@+id/Question15"
+        app:layout_constraintStart_toStartOf="@+id/Question5"
+        app:layout_constraintTop_toBottomOf="@+id/Question5" />
+
+    <Button
+        android:id="@+id/Question15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="106dp"
+        android:text="15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Question10"
+        app:layout_constraintTop_toBottomOf="@+id/Question10" />
+
+    <Button
+        android:id="@+id/Question3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="31dp"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/Question5"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="164dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginTop="41dp"
+        android:text="Number of Questions"
+        app:layout_constraintBottom_toTopOf="@+id/Question3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
