@@ -27,6 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Score"></activity>
+        <service android:name="MusicService" android:enabled="true"/>
     </application>
 
 </manifest>
