@@ -115,7 +115,11 @@ public class WebScraper {
             while(fakeans.size() < 3){
                 int n = rand.nextInt(s.size());
                 if(n != i){
+                    while(fakeans.contains(s.get(n)[0])) {
+                        n = rand.nextInt(s.size());
+                    }
                     fakeans.add(s.get(n)[0]);
+
                 }
             }
 
