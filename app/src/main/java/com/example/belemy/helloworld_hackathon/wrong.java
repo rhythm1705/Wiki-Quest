@@ -24,10 +24,20 @@ public class wrong extends AppCompatActivity {
     }
     public void nextActivity(View view){
 
-        Intent intent = new Intent(this, Questions.class);
-        intent.putExtra("genres",genres);
-        intent.putExtra("questions", QuestionNumber);
-        intent.putExtra("time", time);
-        startActivity(intent);
+        if(QuestionNumber>0){
+            Intent intent = new Intent(this, Questions.class);
+            intent.putExtra("genres",genres);
+            intent.putExtra("questions", QuestionNumber);
+            intent.putExtra("time", time);
+            //correct++;
+            startActivity(intent);
+        }else{
+            Intent intent = new Intent(this, Score.class);
+            //intent.putExtra("genres",genres);
+            //intent.putExtra("questions", QuestionNumber);
+            //intent.putExtra("time", time);
+            //correct++;
+            startActivity(intent);
+        }
     }//nextactivity
 }

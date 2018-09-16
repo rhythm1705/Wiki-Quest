@@ -30,13 +30,13 @@ public class Questions extends AppCompatActivity {
             genres = bundle.getStringArrayList("genres");
             QuestionNumber = bundle.getInt("questions");
             time = bundle.getInt("time");
+            TriviaGame game= TriviaGame.getInstance(genres, getResources());
+            Q=game.getQuestion();
             setQuestion();
         }//if
     }//oncreate
 
     public void setQuestion (){
-        TriviaGame game= TriviaGame.getInstance(genres, getResources());
-        Q=game.getQuestion(QuestionNumber);
         TextView ques;
         ques=(TextView)findViewById(R.id.textView2);
         ques.setText(Q.getText());
@@ -95,8 +95,8 @@ public class Questions extends AppCompatActivity {
     }//setquestion
 
     public void nextActivity(View view){
-        if(QuestionNumber>1) {
-            if() {
+        //if(QuestionNumber>1) {
+            if(view.getId()==correctId) {
                 Intent intent = new Intent(this, correct.class);
                 intent.putExtra("genres",genres);
                 intent.putExtra("questions", --QuestionNumber);
@@ -109,9 +109,9 @@ public class Questions extends AppCompatActivity {
                 intent.putExtra("time", time);
                 startActivity(intent);
             }//else
-        }else{
-            Intent intent = new Intent(this, Score.class);
-            startActivity(intent);
-        }//else
+        //}else{
+            //Intent intent = new Intent(this, Score.class);
+            //startActivity(intent);
+        //}//else
     }//nextactivity
 }//class
