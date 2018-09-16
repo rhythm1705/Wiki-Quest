@@ -16,7 +16,7 @@ public class Score extends AppCompatActivity {
         setContentView(R.layout.activity_score);
         TextView score;
         score=(TextView)findViewById(R.id.textView6);
-        score.setText("Your score  is " + correct.correct);
+        score.setText("Your score  is " + correct.correct+" !");
     }
     public void reset(){
         correct.correct = 0;

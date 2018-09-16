@@ -41,7 +41,7 @@ public class Questions_Activity extends AppCompatActivity {
             default:
                 QuestionNumber=3;
         }
-        Intent intent = new Intent(this, time_Activity.class);
+        Intent intent = new Intent(this, areyouReady.class);
         intent.putExtra("genres", genres);
         intent.putExtra("questions", QuestionNumber);
         startActivity(intent);

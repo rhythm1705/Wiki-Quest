@@ -18,7 +18,7 @@ import backend.TriviaQuestion;
 public class Questions extends AppCompatActivity {
     ArrayList<String> genres;
     int QuestionNumber;
-    int time;
+    //int time;
     TriviaQuestion Q;
     int correctId;
     @Override
@@ -29,7 +29,7 @@ public class Questions extends AppCompatActivity {
         if (bundle != null){
             genres = bundle.getStringArrayList("genres");
             QuestionNumber = bundle.getInt("questions");
-            time = bundle.getInt("time");
+      //      time = bundle.getInt("time");
             TriviaGame game= TriviaGame.getInstance(genres, getResources());
             Q=game.getQuestion();
             setQuestion();
@@ -100,13 +100,13 @@ public class Questions extends AppCompatActivity {
                 Intent intent = new Intent(this, correct.class);
                 intent.putExtra("genres",genres);
                 intent.putExtra("questions", --QuestionNumber);
-                intent.putExtra("time", time);
+               // intent.putExtra("time", time);
                 startActivity(intent);
             }else{
                 Intent intent = new Intent(this, wrong.class);
                 intent.putExtra("genres",genres);
                 intent.putExtra("questions", --QuestionNumber);
-                intent.putExtra("time", time);
+                //intent.putExtra("time", time);
                 startActivity(intent);
             }//else
         //}else{

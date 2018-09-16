@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class letsGo extends AppCompatActivity {
     ArrayList<String> genres;
     int QuestionNumber;
-    int time;
+    //int time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +19,14 @@ public class letsGo extends AppCompatActivity {
         if (bundle != null){
             genres = bundle.getStringArrayList("genres");
             QuestionNumber = bundle.getInt("questions");
-            time = bundle.getInt("time");
+      //      time = bundle.getInt("time");
         }//if
     }//oncreate
     public void nextActivity(View view){
         Intent intent = new Intent(this, Questions.class);
         intent.putExtra("genres",genres);
         intent.putExtra("questions", QuestionNumber);
-        intent.putExtra("time", time);
+        //intent.putExtra("time", time);
         startActivity(intent);
     }//nextactivity
 }//class

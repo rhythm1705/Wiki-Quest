@@ -8,11 +8,16 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="395dp"
-        android:layout_height="678dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#FF5733"
+        android:fontFamily="casual"
         android:onClick="nextActivity"
         android:text="Are You Ready?"
         android:textSize="100sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

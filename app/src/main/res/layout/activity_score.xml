@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Score"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="307dp"
-        android:layout_height="0dp"
+        android:layout_width="315dp"
+        android:layout_height="395dp"
         android:layout_marginBottom="96dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="74dp"
+        android:fontFamily="casual"
         android:text="TextView"
-        android:textSize="100sp"
+        android:textColor="#ffffffff"
+        android:textSize="80sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +33,15 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="41dp"
         android:layout_marginEnd="52dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="52dp"
+        android:layout_marginStart="8dp"
         android:onClick="nextActivity"
         android:text="Repeat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </android.support.constraint.ConstraintLayout>

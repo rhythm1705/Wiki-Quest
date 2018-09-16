@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class wrong extends AppCompatActivity {
     ArrayList<String> genres;
     int QuestionNumber;
-    int time;
+    //int time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +19,7 @@ public class wrong extends AppCompatActivity {
         if (bundle != null){
             genres = bundle.getStringArrayList("genres");
             QuestionNumber = bundle.getInt("questions");
-            time = bundle.getInt("time");
+            //time = bundle.getInt("time");
         }//if
     }
     public void nextActivity(View view){
@@ -28,7 +28,7 @@ public class wrong extends AppCompatActivity {
             Intent intent = new Intent(this, Questions.class);
             intent.putExtra("genres",genres);
             intent.putExtra("questions", QuestionNumber);
-            intent.putExtra("time", time);
+           // intent.putExtra("time", time);
             //correct++;
             startActivity(intent);
         }else{
