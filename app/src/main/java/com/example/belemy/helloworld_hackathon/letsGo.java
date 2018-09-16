@@ -1,6 +1,10 @@
 package com.example.belemy.helloworld_hackathon;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +19,7 @@ public class letsGo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lets_go);
+
         if(savedInstanceState!=null) {
             genres = savedInstanceState.getStringArrayList("genres");
             QuestionNumber = savedInstanceState.getInt("questions");
