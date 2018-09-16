@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Questions_Activity" />
-        <activity android:name=".TimeperQActivity"></activity>
+        <activity android:name=".time_Activity" />
     </application>
 
 </manifest>

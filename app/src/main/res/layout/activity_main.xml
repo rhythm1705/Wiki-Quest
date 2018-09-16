@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF0000"
+    android:background="#ffffff"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
@@ -18,7 +18,7 @@
         android:layout_marginRight="63dp"
         android:layout_marginStart="63dp"
         android:layout_marginTop="104dp"
-        android:background="#FF0000"
+        android:background="#fdfdfd"
         android:text="Cities"
         app:layout_constraintBottom_toTopOf="@+id/sportsSwitch"
         app:layout_constraintEnd_toEndOf="parent"
