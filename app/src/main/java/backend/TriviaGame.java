@@ -1,5 +1,6 @@
 package backend;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class TriviaGame {
 
@@ -8,12 +9,18 @@ public class TriviaGame {
 
     public TriviaGame(GameParameters params){
 
+        Random r = new Random();
+
         this.params = params;
 
         WebScraper w = new WebScraper(params.genres);
 
+
         questions = w.getQuestions();
-        System.out.println(questions.get(0).toString());
+        int num = (int)((r.nextDouble())*(w.getNumWebsites()));
+
+
+        System.out.println(questions.get(num).toString());
     }
 
     public static void main(String[] args){

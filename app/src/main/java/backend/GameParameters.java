@@ -10,5 +10,7 @@ public class GameParameters {
     public GameParameters() {
         genres.add("HistoricalFigures");
         genres.add("FineArts");
+        genres.add("Combat");
+
     }
 }

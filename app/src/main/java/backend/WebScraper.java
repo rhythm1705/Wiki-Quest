@@ -32,37 +32,6 @@ public class WebScraper {
                 int space = s.indexOf(' ');
                 String cat = s.substring(0,space);
                 String url = s.substring(space+1,s.length());
-                /*if(cat.equals("Sports")){
-                    for(int i=0; i<categories.size(); i++){
-                        if(categories.get(i).equals("Sports")){
-                            websites.add(url);
-                        }
-                    }
-                }else if(cat.equals("Geography")){
-                    for(int i=0; i<categories.size(); i++){
-                        if(categories.get(i).equals("Geography")){
-                            websites.add(url);
-                        }
-                    }
-                }else if(cat.equals("HistoricalFigures")){
-                    for(int i=0; i<categories.size(); i++){
-                        if(categories.get(i).equals("HistoricalFigures")){
-                            websites.add(url);
-                        }
-                    }
-                }else if(cat.equals("Combat")){
-                    for(int i=0; i<categories.size(); i++){
-                        if(categories.get(i).equals("Combat")){
-                            websites.add(url);
-                        }
-                    }
-                }else if(cat.equals("FineArts")){
-                    for(int i=0; i<categories.size(); i++){
-                        if(websites.get(i).equals("FineArts")){
-                            websites.add(url);
-                        }
-                    }
-                }*/
 
                 if(categories.contains(cat)){
                     websites.add(url);
@@ -152,6 +121,9 @@ public class WebScraper {
                     temp.substring(temp.indexOf(end) + 1);
         }
         return temp;
+    }
+    public int getNumWebsites(){
+        return websites.size();
     }
     /*public static void main (String[] args){
         ArrayList<String> list = new ArrayList<String>();
