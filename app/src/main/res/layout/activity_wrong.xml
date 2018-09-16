@@ -13,6 +13,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="#f90000"
+        android:onClick="nextActivity"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp" />
 </android.widget.RelativeLayout>

@@ -95,17 +95,17 @@ public class Questions extends AppCompatActivity {
     }//setquestion
 
     public void nextActivity(View view){
-        if(QuestionNumber>0) {
-            if(view.getId()==correctId) {
+        if(QuestionNumber>1) {
+            if() {
                 Intent intent = new Intent(this, correct.class);
                 intent.putExtra("genres",genres);
-                intent.putExtra("questions", QuestionNumber--);
+                intent.putExtra("questions", --QuestionNumber);
                 intent.putExtra("time", time);
                 startActivity(intent);
             }else{
                 Intent intent = new Intent(this, wrong.class);
                 intent.putExtra("genres",genres);
-                intent.putExtra("questions", QuestionNumber--);
+                intent.putExtra("questions", --QuestionNumber);
                 intent.putExtra("time", time);
                 startActivity(intent);
             }//else
