@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class wrong extends AppCompatActivity {
     ArrayList<String> genres;
     int QuestionNumber;
-    //int time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +20,9 @@ public class wrong extends AppCompatActivity {
         if (bundle != null){
             genres = bundle.getStringArrayList("genres");
             QuestionNumber = bundle.getInt("questions");
-            //time = bundle.getInt("time");
+            TextView answer;
+            answer=findViewById(R.id.button6);
+            answer.setText(bundle.getString("answer"));
         }//if
     }
     public void nextActivity(View view){

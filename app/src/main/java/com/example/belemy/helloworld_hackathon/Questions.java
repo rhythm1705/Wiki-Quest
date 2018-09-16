@@ -106,6 +106,7 @@ public class Questions extends AppCompatActivity {
                 Intent intent = new Intent(this, wrong.class);
                 intent.putExtra("genres",genres);
                 intent.putExtra("questions", --QuestionNumber);
+                intent.putExtra("answer", Q.getAns());
                 //intent.putExtra("time", time);
                 startActivity(intent);
             }//else

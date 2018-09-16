@@ -37,15 +37,16 @@ public class MainActivity extends AppCompatActivity {
                 genres.add(genreSwitch.getText().toString());
             }//if
         }//for
-       // GameParameters.genres = genres;
-        //System.out.println(genres.toString());
         Bundle bundle = new Bundle();
         bundle.putStringArrayList("genres", genres);
+        if(genres.size()!=0) {
         Intent intent = new Intent(this, Questions_Activity.class);
         intent.putExtra("genres", genres);
-        //if(genres!=null) {
+        startActivity(intent);
+        }else{
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        //}
+        }
     }//nextactivity
 
     private boolean mIsBound = false;

@@ -37,7 +37,7 @@
         android:layout_marginRight="52dp"
         android:layout_marginStart="8dp"
         android:onClick="nextActivity"
-        android:text="Repeat"
+        android:text="Replay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.581"
