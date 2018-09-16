@@ -10,14 +10,13 @@
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/radioGroup1"
         android:layout_width="384dp"
-        android:layout_height="wrap_content"
+        android:layout_height="201dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="165dp"
-        android:layout_alignParentRight="true">
+        tools:layout_editor_absoluteY="165dp">
 
         <RadioButton
             android:id="@+id/radioButton"
@@ -25,6 +24,7 @@
             android:layout_height="wrap_content"
             android:text="3 Sec"
             tools:ignore="MissingConstraints"
+            android:onClick="nextActivity"
             tools:layout_editor_absoluteX="194dp"
             tools:layout_editor_absoluteY="329dp" />
 
@@ -33,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5 Sec"
+            android:onClick="nextActivity"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="194dp"
             tools:layout_editor_absoluteY="401dp" />
@@ -42,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="10 Sec"
+            android:onClick="nextActivity"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="185dp"
             tools:layout_editor_absoluteY="468dp" />
@@ -51,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="15 sec"
+            android:onClick="nextActivity"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="185dp"
             tools:layout_editor_absoluteY="546dp" />

@@ -27,8 +27,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="109dp"
+        android:layout_marginTop="146dp"
         android:orientation="vertical"
+        android:gravity="center"
         tools:ignore="MissingConstraints,RtlCompat"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="165dp">

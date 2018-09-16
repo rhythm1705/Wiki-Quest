@@ -7,41 +7,26 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class time_Activity extends AppCompatActivity {
+public class areyouReady extends AppCompatActivity {
     ArrayList<String> genres;
     int QuestionNumber;
+    int time;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time_);
+        setContentView(R.layout.activity_areyou_ready);
         if(savedInstanceState!=null) {
             genres = savedInstanceState.getStringArrayList("genres");
             QuestionNumber = savedInstanceState.getInt("questions");
+            time = savedInstanceState.getInt("time");
         }
     }
     public void nextActivity(View view){
-        int time;
-        switch(view.getId()) {
-            case R.id.radioButton:
-                time=3;
-                break;
-            case R.id.radioButton2:
-                time=5;
-                break;
-            case R.id.radioButton3:
-                time=10;
-                break;
-            case R.id.radioButton4:
-                time=15;
-                break;
-            default:
-                time=10;
-        }
         Bundle bundle= new Bundle();
         bundle.putInt("time",time);
         bundle.putInt("questions", QuestionNumber);
         bundle.putStringArrayList("genres",genres);
-        Intent intent = new Intent(this, areyouReady.class);
+        Intent intent = new Intent(this, letsGo.class);
         startActivity(intent,bundle);
     }
 }

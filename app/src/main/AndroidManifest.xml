@@ -18,6 +18,8 @@
         </activity>
         <activity android:name=".Questions_Activity" />
         <activity android:name=".time_Activity" />
+        <activity android:name=".areyouReady" />
+        <activity android:name=".letsGo"></activity>
     </application>
 
 </manifest>
