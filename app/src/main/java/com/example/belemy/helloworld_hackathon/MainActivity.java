@@ -21,22 +21,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-    }
+    }//oncreate
     public void nextActivity(View view){
         ArrayList<String> genres = new ArrayList<>();
         for (int id : ids){
             Switch genreSwitch = findViewById(id);
             if (genreSwitch.isChecked()){
                 genres.add(genreSwitch.getText().toString());
-            }
-        }
+            }//if
+        }//for
        // GameParameters.genres = genres;
         //System.out.println(genres.toString());
         Bundle bundle = new Bundle();
         bundle.putStringArrayList("genres", genres);
         Intent intent = new Intent(this, Questions_Activity.class);
-        if(genres!=null) {
-            startActivity(intent, bundle);
-        }
-    }
-}
+        intent.putExtra("genres", genres);
+        //if(genres!=null) {
+            startActivity(intent);
+        //}
+    }//nextactivity
+}//class

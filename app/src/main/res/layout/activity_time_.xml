@@ -11,10 +11,12 @@
         android:id="@+id/radioGroup1"
         android:layout_width="384dp"
         android:layout_height="201dp"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="106dp"
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
+        android:gravity="center"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="165dp">
 
@@ -22,9 +24,9 @@
             android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="nextActivity"
             android:text="3 Sec"
             tools:ignore="MissingConstraints"
-            android:onClick="nextActivity"
             tools:layout_editor_absoluteX="194dp"
             tools:layout_editor_absoluteY="329dp" />
 
@@ -32,8 +34,8 @@
             android:id="@+id/radioButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5 Sec"
             android:onClick="nextActivity"
+            android:text="5 Sec"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="194dp"
             tools:layout_editor_absoluteY="401dp" />
@@ -42,8 +44,8 @@
             android:id="@+id/radioButton3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="10 Sec"
             android:onClick="nextActivity"
+            android:text="10 Sec"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="185dp"
             tools:layout_editor_absoluteY="468dp" />
@@ -52,8 +54,8 @@
             android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15 sec"
             android:onClick="nextActivity"
+            android:text="15 sec"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="185dp"
             tools:layout_editor_absoluteY="546dp" />

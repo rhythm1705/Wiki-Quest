@@ -1,9 +1,16 @@
 package backend;
 
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+
+import com.example.belemy.helloworld_hackathon.MainActivity;
+import com.example.belemy.helloworld_hackathon.first;
+
 import org.jsoup.Jsoup;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -14,9 +21,11 @@ public class WebScraper {
     private ArrayList<String> categories;
     private static ArrayList<String> websites = new ArrayList<String>();
     private int numberOfWebsites;
+    private Resources r;
 
-    public WebScraper(ArrayList<String> l){
+    public WebScraper(ArrayList<String> l, Resources r){
         categories = l;
+        this.r = r;
 
     }
 
@@ -24,9 +33,16 @@ public class WebScraper {
         return getQuestions(scrapeURL(fillWebsites()));
     }
     public ArrayList<String> fillWebsites(){
+
+        //String[][] urls = new [["Geography", "https://en.wikipedia.org/wiki/Death_Valley"]];
+
+
+
         String s = " ";
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\justi\\AndroidStudioProjects\\program\\app\\src\\main\\java\\backend\\Websites"));
+            int id = r.getIdentifier("websites", "raw", first.pak);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+                                    r.openRawResource(id)));
 
             while((s = reader.readLine())!=null){
                 int space = s.indexOf(' ');

@@ -14,11 +14,12 @@ public class time_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_);
-        if(savedInstanceState!=null) {
-            genres = savedInstanceState.getStringArrayList("genres");
-            QuestionNumber = savedInstanceState.getInt("questions");
-        }
-    }
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null){
+            genres = bundle.getStringArrayList("genres");
+            QuestionNumber = bundle.getInt("questions");
+        }//if
+    }//oncreate
     public void nextActivity(View view){
         int time;
         switch(view.getId()) {
@@ -36,12 +37,11 @@ public class time_Activity extends AppCompatActivity {
                 break;
             default:
                 time=10;
-        }
-        Bundle bundle= new Bundle();
-        bundle.putInt("time",time);
-        bundle.putInt("questions", QuestionNumber);
-        bundle.putStringArrayList("genres",genres);
+        }//switch
         Intent intent = new Intent(this, areyouReady.class);
-        startActivity(intent,bundle);
-    }
-}
+        intent.putExtra("genres",genres);
+        intent.putExtra("questions", QuestionNumber);
+        intent.putExtra("time", time);
+        startActivity(intent);
+    }//nextactivity
+}//class

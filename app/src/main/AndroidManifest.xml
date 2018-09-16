@@ -9,17 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Questions_Activity" />
+        <activity android:name=".time_Activity" />
+        <activity android:name=".areyouReady" />
+        <activity android:name=".letsGo" />
+        <activity android:name=".Questions" />
+        <activity android:name=".Score" />
+        <activity android:name=".correct" />
+        <activity android:name=".wrong" />
+        <activity android:name=".first">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Questions_Activity" />
-        <activity android:name=".time_Activity" />
-        <activity android:name=".areyouReady" />
-        <activity android:name=".letsGo"></activity>
     </application>
 
 </manifest>

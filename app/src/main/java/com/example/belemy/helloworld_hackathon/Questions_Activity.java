@@ -18,10 +18,11 @@ public class Questions_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions_);
-        if(savedInstanceState!=null) {
-            genres = savedInstanceState.getStringArrayList("genres");
-        }
-    }
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            genres = bundle.getStringArrayList("genres");
+            }//else
+    }//oncreate
     public void nextActivity(View view){
         int QuestionNumber;
         switch(view.getId()) {
@@ -40,11 +41,10 @@ public class Questions_Activity extends AppCompatActivity {
             default:
                 QuestionNumber=3;
         }
-        Bundle bundle= new Bundle();
-        bundle.putInt("questions", QuestionNumber);
-        bundle.putStringArrayList("genres",genres);
         Intent intent = new Intent(this, time_Activity.class);
-        startActivity(intent,bundle);
-    }
+        intent.putExtra("genres", genres);
+        intent.putExtra("questions", QuestionNumber);
+        startActivity(intent);
+    }//nextactivity
 
-}
+}//class
