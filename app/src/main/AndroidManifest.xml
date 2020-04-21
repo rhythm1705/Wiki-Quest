@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.belemy.helloworld_hackathon">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Wiki Quest"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="AllowBackup">
         <activity android:name=".MainActivity" />
         <activity android:name=".Questions_Activity" />
         <activity android:name=".time_Activity" />
-        <activity android:name=".areyouReady" />
+        <activity android:name=".areYouReady" />
         <activity android:name=".letsGo" />
         <activity android:name=".Questions" />
         <activity android:name=".correct" />
@@ -26,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Score"></activity>
+        <activity android:name=".Score" />
         <service android:name="MusicService" android:enabled="true"/>
     </application>
 

@@ -1,14 +1,11 @@
 package com.example.belemy.helloworld_hackathon;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Switch;
 
 import java.util.ArrayList;
-
-import backend.GameParameters;
 
 public class Questions_Activity extends AppCompatActivity {
     ArrayList<String> genres;
@@ -41,7 +38,7 @@ public class Questions_Activity extends AppCompatActivity {
             default:
                 QuestionNumber=3;
         }
-        Intent intent = new Intent(this, areyouReady.class);
+        Intent intent = new Intent(this, areYouReady.class);
         intent.putExtra("genres", genres);
         intent.putExtra("questions", QuestionNumber);
         startActivity(intent);

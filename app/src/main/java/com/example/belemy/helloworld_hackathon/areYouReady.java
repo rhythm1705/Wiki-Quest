@@ -1,13 +1,13 @@
 package com.example.belemy.helloworld_hackathon;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import java.util.ArrayList;
 
-public class areyouReady extends AppCompatActivity {
+public class areYouReady extends AppCompatActivity {
     ArrayList<String> genres;
     int QuestionNumber;
     //int time;

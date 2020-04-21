@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name" />
     <string name="title_activity_questions">QuestionsActivity</string>
+    <string name="are_you_ready">Are You Ready?</string>
 </resources>

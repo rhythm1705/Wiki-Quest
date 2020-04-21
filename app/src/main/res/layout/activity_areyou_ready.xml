@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".areyouReady">
+    tools:context=".areYouReady">
 
     <Button
         android:id="@+id/button2"
@@ -15,11 +15,12 @@
         android:background="#FF5733"
         android:fontFamily="casual"
         android:onClick="nextActivity"
-        android:text="Are You Ready?"
+        android:layout_alignParentLeft="true"
         android:textSize="100sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/are_you_ready"
         tools:layout_editor_absoluteY="8dp" />
 </android.widget.RelativeLayout>
